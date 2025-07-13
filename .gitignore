@@ -1,0 +1,75 @@
+# .NET Core
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs/
+.vscode/
+*.dbmdl
+*.pidb
+*.svclog
+*.pdb
+*.cache
+*.log
+*.ide
+*.sln.ide
+*.orig
+*.rej
+*.dll
+*.exe
+*.app
+*.lib
+*.nupkg
+*.nuspec
+*.psess
+*.vsp
+*.vspscc
+*.vssscc
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.tgz
+*.tar.gz
+*.zip
+*.7z
+*.gz
+*.rar
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+*.sublime-workspace
+*.sublime-project
+*.idea/
+*.Rproj.user/
+*.coverage
+TestResults/
+build/
+node_modules/
+wwwroot/
+.env
+.env.*
+# Rider
+.idea/
+*.sln.iml
+# Visual Studio Code
+.vscode/
+.history/
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+# DotCover
+*.dotCover
+# Azure Pipelines
+*.azure-pipelines/
+# Local NuGet packages
+*.nupkg
+# Others
+*.publish/

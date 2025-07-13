@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BackgroundProcess/BackgroundProcess.csproj" />
+  <Project Path="BackgroundProcessConsoleTest/BackgroundProcessConsoleTest.csproj" />
+  <Project Path="BackgroundProcessTest/BackgroundProcessTest.csproj" />
+</Solution>
