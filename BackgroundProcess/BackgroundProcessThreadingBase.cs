@@ -14,7 +14,7 @@ public abstract class BackgroundProcessThreadingBase : IDisposable
         _timer = new Timer(ThreadActivity, "parameterValue", 0, interval);
     }
 
-    protected void ErrorLog(Exception e)
+    protected virtual void ErrorLog(Exception e)
     {
         Console.WriteLine($"Error: {e.Message}");
         if (e.InnerException != null)
@@ -24,7 +24,7 @@ public abstract class BackgroundProcessThreadingBase : IDisposable
         Console.WriteLine("Stack Trace: " + e.StackTrace);
     }
 
-    protected void ErrorLog(Exception e, string message)
+    protected virtual void ErrorLog(Exception e, string message)
     {
         Console.WriteLine($"Error: {e.Message}");
         if (e.InnerException != null)
@@ -35,12 +35,12 @@ public abstract class BackgroundProcessThreadingBase : IDisposable
         Console.WriteLine($"Additional Info: {message}");
     }
 
-    protected void ErrorLog(string message)
+    protected virtual void ErrorLog(string message)
     {
         Console.WriteLine($"Error: {message}");
     }
 
-    protected void InfoLog(string message)
+    protected virtual void InfoLog(string message)
     {
         Console.WriteLine($"Info: {message}");
     }
@@ -169,7 +169,18 @@ public abstract class BackgroundProcessThreadingBase : IDisposable
             Thread.Sleep(100);
         }
 
-        Console.WriteLine("Activity stopped.");
+        // Console.WriteLine("Activity stopped.");
+        OnAfterStopActivity();
+    }
+
+    protected virtual void OnBeforeStartActivity()
+    {
+        InfoLog("Preparing to start activity...");
+    }
+
+    protected virtual void OnAfterStopActivity()
+    {
+        InfoLog("Activity stopped successfully.");
     }
 
     private void TryDispose<T>(ref T? disposable) where T : class, IDisposable
