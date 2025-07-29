@@ -150,6 +150,7 @@ public abstract class BackgroundProcessThreadingBase : IDisposable
 
     public void StartActivity()
     {
+        OnBeforeStartActivity();
         _activityState = true;
         _isOnCheckStopedActivity = false;
         while (!_isRunning)
